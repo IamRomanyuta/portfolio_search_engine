@@ -15,17 +15,9 @@ struct Entry {
 class InvertedIndex {
  public:
   InvertedIndex() = default;
-/**
- * Update or fill in the database of documents on which we will search
- * @param input_docs document content
-*/
+
   void UpdateDocumentBase(const std::vector<std::string>& input_docs);
-/**
- * ** The method determines the number of occurrences of the word word in
- * the loaded database documents
- * @param word the word whose occurrence frequency is to be determined
- * @return returns a prepared list with word frequency
-*/
+
   std::vector<Entry> GetWordCount(const std::string& word);
  private:
   std::vector<std::string> mDocs;

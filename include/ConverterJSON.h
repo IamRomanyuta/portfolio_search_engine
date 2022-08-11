@@ -13,25 +13,13 @@ class ConverterJSON {
   ConverterJSON(std::string pathConfig,
                 std::string pathRequests,
                 std::string pathAnswers);
-/**
-* File content retrieval method
-* @return Returns a list with the contents of the files listed
-* in config.json
-*/
+
   std::vector<std::string> GetTextDocuments();
-/**
-* The method reads the max_responses field to determine the limit
-* number of responses per request
-*/
+
   size_t GetResponseLimit() const;
-/**
-* Method for receiving mRequests from the mRequests.json file
-* @return returns a list of mRequests from the mRequests.json file
-*/
+
   std::vector<std::string> GetRequests();
-/**
-* Put search results in answers.json file
-*/
+
   void putAnswers(std::vector<std::vector<RelativeIndex>>
                   answers);
 
