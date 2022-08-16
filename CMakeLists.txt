@@ -19,10 +19,9 @@ add_executable(
 
 ## nlohmann_json
 
-include(FetchContent)
+set(JSON_BuildTests OFF CACHE INTERNAl "")
 
-FetchContent_Declare(json URL https://github.com/nlohmann/json/releases/download/v3.10.5/json.tar.xz)
-FetchContent_MakeAvailable(json)
+add_subdirectory(nlohmann_json)
 
 target_include_directories(search_engine PUBLIC ${M_I_D})
 
